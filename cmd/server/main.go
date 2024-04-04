@@ -29,6 +29,7 @@ func main() {
     {
         v1.GET("/contents", content.GetContents)
         v1.POST("/contents", content.PostContents)
+        v1.POST("/contents/import", content.ConsumeFile)
     }
 
     chanErrors := make(chan error)
