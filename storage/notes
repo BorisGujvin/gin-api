@@ -1,0 +1,166 @@
+PROD      ssh forge@142.93.138.131
+TEST        ssh forge@178.62.202.144
+release to prod  (перед запуском делать скриншоты таблиц для надежности)!!!!!
+
+1) код ревью и подготовка списка скриптов
+2) пуш в мастер без удаления ветки релиз
+3) подготовить внешние системы (например, пайпдрайв) (при необходимости)
+4) актуализировать .env
+5) если нужна манипуляция перед деплоем остановить нджинкс
+6)  проверить гуглАналитику, что нет посетителей
+7) запускаю деплой кнопкой
+8) запускаю скрипты
+9) рестарт, если останавливал нджинкс
+
+
+PROD:
+
+
+PROD, RELEASE: 
+
+1) поместить в энв переменные 
+MIX_VUE_APP_SNAKIFY_OUTGOING=true
+MIX_VUE_APP_CAMELIZE_INCOMING=true
+
+2) обновить конфиги php artisan co:ca
+
+3) собрать фронт npm run dev
+
+4) php artisan cache:clear (почистить кэш Лары, чтобы лейблы подтянулись для карточек аукционов)
+
+5) php artisan queue:work (запустить демона чтобы данные на фронте аукциона обновлялись в режиме онлайн
+32 263
+6) Добавить в энв, обновить конфиг, пересобрать фронт:
+
+MIX_APP_KEY=${APP_KEY}
+PUSHER_APP_ID=1298894
+PUSHER_APP_KEY=91157b7a1fad5eccddd5
+PUSHER_APP_SECRET=9b4a9b1d56f6cd46cf6e
+PUSHER_APP_CLUSTER=eu
+MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+BROADCAST_DRIVER=pusher - заменить
+
+
+
+
+GOOGLE ANALITICS
+boris@handlarfinans.se
+pass:  6fQ5Tr7u@Y
+
+php art send
+
+
+067 573 17 30 Дмитрий the place of после 14-15
+
+55675357441
+
+FORGE 
+ssh forge@178.62.202.144
+
+Mандрил
+https://mandrillapp.com//activity
+Mailchimp
+HandlarfAcke
+7u@Y6fQ5Tr
+
+VISMA
+test
+handlarfinanssverigeab@easandbox.com
+hYv238Ds
+
+46elks
+info@handlarfinans.se       erik@handlarfinans.se
+x6dl7Y65
+{"connect": "+4600110801"}
+
+
+Cache lara
+php artisan optimize:clear
+
+
+SMARTSPEAK PRODUCTION
+ssh forge@167.172.45.209
+https://smartspeak.local/clubs/preview/2cffc27b-071b-4afb-a317-61853c613505?schedule=d70ec6e5-841e-4a3a-a3e3-e9042a4c3302
+
+Scrive sandBox 
+https://api-testbed.scrive.com/d/8222115557375922806
+axel@handlarfinans.se
+df5yjNUzYb3U
+collaborationAgreemantID  8222115557375922676    8222115557376093537       8222115557376739863
+
+  
+swagger https://eaccountingapi-sandbox.test.vismaonline.com/swagger/ui/index#!/OrdersV2/OrdersV2_Post
+
+N trading 178 f563f475-c54a-40c3-85b3-d8fa06ac7895
+
+overdued aros invoices:
+178 organisation: 63068 63196 66279 69005 69593 70068 66279 70365
+
+ - запретить деплой на стейдже при пуше в другие ветки
+ - ограничить пуши в мастер
+ - запретить мержить ПР мне )
+
+- воспрепятствовать ( по возможности) созданию неприкрепленных никуда аттачментов в висме (супплайер инвойсы)
+- поправить висму мокапы на создание супплайер инвойса и ваучера - возвращать правильные суммы )
+- создать задачу с ексклюд пурчейз фии для отдельного дилера
+(создать таску на проверку ключа, в АПИ по которому мы можем потом найти свой созданный файл в висме без записи в нашу БД или подумать о необходимости сохранять айдишники в БД. или просто мануально Висму нужно будет подчищать)
+- селлер форма не отрабатывает ошибки бека errors
+- задать вопрос Эрику цеплять ли инвойс к ваучеру
+- получать ваучер после создания супплайерИнвойса и  записать дескриптор
+-отдельный сервис для ваучера Voucher/VaucherVismaService ~~
+
+
+ssh -p 65002 u891782417@185.224.137.7
+ 
+
+ueC1QWDz - прод нова olexii@handlarfinans.se
+
+deal_id IN (30579,25785,23487,19311,12421,11076,9512)
+
+
+HN-2576
+
+1) пересмотреть доку в свете скопов новых и кемелКейса
+2) поменять логику
+3) ресурсы - копировать структуру контроллеров
+4) пагинация - ресурс в API/V1
+5) после валидации переводить в снейк_кейс
+
+3293 последий ид в бонус ивентах
+
+в чек кредит лимит не летит валюта
+исправленное
+
+NikitaUser PRs in GitHub
+2505
+2518
+2357
+2353
+2357
+1659
+
+in Jira
+2801
+2850
+1797
+2521
+
+IN_PROCESS
+3069 переассанил на Антона
+
+READY
+2698
+2631
+2616
+2297
+2341
+2184
+1749
+2046
+2085
+1658
+2655
+2977
+
+вынести в хелпер бросание новогоднего сообщения
